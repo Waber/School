@@ -43,7 +43,7 @@ public class Controller {
     @ResponseBody
     public List<User> removeStudent(@PathVariable("index") Integer index){
          studentClassService.removeStudent(index);
-         return studentClassService.getAll();
+         return  studentClassService.getAll();
     }
 
     @GetMapping("/modify/{index}/{grade}")

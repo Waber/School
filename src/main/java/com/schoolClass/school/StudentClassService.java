@@ -1,16 +1,8 @@
 package com.schoolClass.school;
 
 import com.schoolClass.school.model.User;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
 import org.springframework.stereotype.Service;
 
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
-import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,8 +25,8 @@ public class StudentClassService {
         return studentList.get(index);
     }
 
-    public void removeStudent(Integer index){
-        studentList.remove(index);
+    public User removeStudent(Integer index) {
+        return studentList.remove(index.intValue());
     }
 
     public void modifyStudentGrade(Integer index, Double grade) {
